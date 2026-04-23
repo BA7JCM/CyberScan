@@ -22,7 +22,7 @@ Operating Systems Supported
 Installation
 ----
 
-You can install CyberScanAI with [pip](https://pypi.org/project/cyberscanai) or download by cloning the [Git](https://github.com/medbenali/CyberScan) repository.
+You can install CyberScan with [pip](https://pypi.org/project/cyberscan) or download by cloning the [Git](https://github.com/medbenali/CyberScan) repository.
 
 ### Using pip
 
