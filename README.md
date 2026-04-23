@@ -287,9 +287,9 @@ Contact
 
 
 #### BEN ALI Mohamed 
-[![X (Twitter)][10.1]][10]
-[![GitHub][20.1]][20]
-[![LinkedIn][30.1]][30]
+[<img align="left" alt="X" width="26px" src="https://cdn.simpleicons.org/x/000000" style="padding-right:10px;" />][10]
+[<img align="left" alt="GitHub" width="26px" src="https://cdn.simpleicons.org/github/000000" style="padding-right:10px;" />][20]
+[<img align="left" alt="LinkedIn" width="26px" src="https://cdn.simpleicons.org/linkedin/000000" style="padding-right:10px;" />][30]
 ##### Email : mohamed.benali@esprit.tn
 
 
