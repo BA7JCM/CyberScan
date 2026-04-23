@@ -22,15 +22,15 @@ Operating Systems Supported
 Installation
 ----
 
-You can install CyberScan with [pip](https://pypi.org/project/cyberscan) or download by cloning the [Git](https://github.com/medbenali/CyberScan) repository.
+You can install CyberScan with **pip** or **download repository**.
 
-### Using pip
+### pip
 
 ```bash
 $ pip install cyberscan 
 ```
 
-### Using Download [CyberScan](https://github.com/medbenali/CyberScan) repository
+### Download CyberScan repository
 
 You can download CyberScan by cloning the [Git](https://github.com/medbenali/CyberScan) repository:
 
