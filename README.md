@@ -45,18 +45,13 @@ CyberScan works out of the box with [Python](http://www.python.org/download/) ve
 
 [CyberScan](https://github.com/medbenali/CyberScan)  is able to send and capture packets of several protocols, forging and decoding them to be used to most network tasks such as scanning, pinging, probing, and attacks.
 
-Make sure you have CyberScan in your machine:
+You can test the installation CyberScan in your machine:
 
-```sh
-$ git clone https://github.com/medbenali/CyberScan.git
-```
-
-You can test the installation firing up CyberScan iteratively. These are some useful functions:
-
-```sh
-$ CyberScan -h 
+```bash
+$ cyberscan -h 
 ```
 ---
+
 
 ## Pinging The Network
 
@@ -65,7 +60,7 @@ We can perform **ping** operations with several protocols using CyberScan The fa
 ### ARP Ping
 
 ```sh
-$ CyberScan -s 192.168.1.0/24 -p arp
+$ cyberscan -s 192.168.1.0/24 -p arp
 [*] Starting Ping ARP for 192.168.1.0/24
 Begin emission:
 Finished to send 256 packets.
@@ -78,7 +73,7 @@ Received 0 packets, got 0 answers, remaining 256 packets
 In other cases we can use ICMP ping:
 
 ```sh
-$ CyberScan -s 192.168.1.1-254 -p icmp
+$ cyberscan -s 192.168.1.1-254 -p icmp
 [*] Starting Ping ARP for 192.168.1.0/24
 Begin emission:
 Finished to send 256 packets.
@@ -91,7 +86,7 @@ Received 0 packets, got 0 answers, remaining 256 packets
 In case when  ICMP echo requests are blocked, we can still use TCP:
 
 ```sh
-$ CyberScan -s 192.168.1.1-254 -p tcp -d 80
+$ cyberscan -s 192.168.1.1-254 -p tcp -d 80
 ```
 
 ### UDP Ping
@@ -99,7 +94,7 @@ $ CyberScan -s 192.168.1.1-254 -p tcp -d 80
 Or even  UDP  (which produces ICMP port unreachable errors from live hosts). We can pick any port which is most likely to be closed,  such as port 0:
 
 ```sh
-$ CyberScan -s 192.168.*.1-10 -p udp
+$ cyberscan -s 192.168.*.1-10 -p udp
 ```
 
 ---
@@ -111,7 +106,7 @@ $ CyberScan -s 192.168.*.1-10 -p udp
 In CyberSan Tool we can scan with or without specify start and end port 
 
 ```sh
-$ CyberScan -s 192.168.1.1 -p scan -d 1 -t 100
+$ cyberscan -s 192.168.1.1 -p scan -d 1 -t 100
 WARNING: No route found for IPv6 destination :: (no default route?)
 [*] CyberScan Port Scanner
 [*] Scanning 192.168.1.1 From Port 1 To 100: 
@@ -127,7 +122,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
 ```
 
 ```sh
-$ CyberScan -s 8.8.8.8 -p scan
+$ cyberscan -s 8.8.8.8 -p scan
 WARNING: No route found for IPv6 destination :: (no default route?)
 [*] CyberScan Port Scanner
 [*] Scanning For Most Common Ports On 8.8.8.8
@@ -146,7 +141,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
 ## Geolocalisation IP
 
 ```sh
-$ CyberScan -s 72.229.28.185 -p geoip
+$ cyberscan -s 72.229.28.185 -p geoip
 WARNING: No route found for IPv6 destination :: (no default route?)
 [*] IP Address:  72.229.28.185
 [*] City:  New York
@@ -172,7 +167,7 @@ CyberScan can analyse pcap files in order to extract and decode ethernet, ip, tc
 ### Ethernet Headers
 
 ```sh
-$ CyberScan -f test.pcap -p eth
+$ cyberscan -f test.pcap -p eth
 WARNING: No route found for IPv6 destination :: (no default route?)
 ----------------------------------------
 [*] Packet : 1
@@ -185,7 +180,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
 ### IP Headers
 
 ```sh
-$ CyberScan -f test.pcap -p ip
+$ cyberscan -f test.pcap -p ip
 WARNING: No route found for IPv6 destination :: (no default route?)
 ----------------------------------------
 [*] Packet : 1
@@ -214,7 +209,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
 ### TCP Headers
 
 ```sh
-$ CyberScan -f test.pcap -p tcp
+$ cyberscan -f test.pcap -p tcp
 WARNING: No route found for IPv6 destination :: (no default route?)
 ----------------------------------------
 [*] Packet : 1
@@ -239,7 +234,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
 ### UDP Headers
 
 ```sh
-$ CyberScan -f test.pcap -p udp
+$ cyberscan -f test.pcap -p udp
 WARNING: No route found for IPv6 destination :: (no default route?)
 ----------------------------------------
 [*] Packet : 1
@@ -257,7 +252,7 @@ WARNING: No route found for IPv6 destination :: (no default route?)
 ### ICMP Headers
 
 ```sh
-$ CyberScan -f test.pcap -p icmp
+$ cyberscan -f test.pcap -p icmp
 WARNING: No route found for IPv6 destination :: (no default route?)
 ----------------------------------------
 [*] Packet : 1
